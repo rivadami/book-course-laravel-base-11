@@ -20,9 +20,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->enum('posted', ['yes', 'not'])->default('not');
             $table->timestamps();
-
-//            $table->foreignId('category_id')->constrained()
-//                ->onDelete('cascade');
+            $table->foreignId('category_id')->constrained()
+                ->onDelete('cascade');
         });
     }
 
