@@ -19,6 +19,12 @@ class PostController extends Controller
      */
     public function index()
     {
+
+        session(['key' => 'value']);
+        session(['key2' => 'value2']);
+        //session()->flush();
+        //session()->forget('key2');
+
         $posts = Post::paginate(3);
         //dd($posts);
         return view('dashboard.post.index', compact('posts'));
