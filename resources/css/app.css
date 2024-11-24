@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.table{
+    @apply table-auto w-full
+}
+
+.table th{
+    @apply px-6 py-2 bg-gray-50 font-medium uppercase border leading-4 tracking-widest
+}
+
+.table td{
+    @apply px-6 py-2 bg-white border leading-4 tracking-widest
+}
+
+.form-control{
+    @apply block rounded-sm 
+}
+
+.btn{
+    @apply border rounded-sm bg-blue-500 text-white font-bold
+}
+
+.btn-danger{
+    @apply bg-red-500 text-white font-bold hover:bg-red-800
+}
+
+.card{
+    @apply p-6 rounded-sm shadow-sm
+}
+
+.card-white{
+    @apply bg-white
+}
+.card-success{
+    @apply bg-green-500 text-white
+}

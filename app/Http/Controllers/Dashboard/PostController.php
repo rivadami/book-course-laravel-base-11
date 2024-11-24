@@ -26,7 +26,6 @@ class PostController extends Controller
         //session()->forget('key2');
 
         $posts = Post::paginate(3);
-        //dd($posts);
         return view('dashboard.post.index', compact('posts'));
 
         //$post = Post::find(8);
@@ -78,7 +77,7 @@ class PostController extends Controller
         $post = new Post();
         //dd($post);
         //dd($categories);
-        return view('dashboard.post.create', compact('categories','post'));
+        return view('dashboard.post.create', compact('categories','post'))->with('status', 'Post Created');
     }
 
     /**
@@ -164,7 +163,7 @@ class PostController extends Controller
         }
         
         $post->update($data);
-        return to_route('post.index');
+        return to_route('post.index')->with('status', 'Post Edited');
     }
 
     /**
@@ -173,6 +172,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return to_route('post.index');
+        return to_route('post.index')->with('status', 'Post Deleted');
     }
 }

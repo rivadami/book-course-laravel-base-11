@@ -5,21 +5,21 @@
 @endsection
 @section('content')
     <h1>Index</h1>
-    <a href=" {{ route('category.create') }} ">Create</a>
-    <table>
+    <a class="btn" href=" {{ route('category.create') }} ">Create</a>
+    <table class="table">
         <thead>
-            <tr>
+            <th>
                 ID
-            </tr>
-            <tr>
+            </th>
+            <th>
                 Title
-            </tr>
-            <tr>
+            </th>
+            <th>
                 Slug
-            </tr>
-            <tr>
+            </th>
+            <th>
                 Actions
-            </tr>
+            </th>
         </thead>
         <tbody>
             @foreach ($categories as $category)
@@ -39,7 +39,7 @@
                         <form action="{{ route('category.destroy', $category) }}" method="post">
                             @method('DELETE')
                             @csrf
-                            <button type="submit">Delete</button>
+                            <button class="btn btn-danger" type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>

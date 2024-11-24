@@ -5,24 +5,24 @@
 @endsection
 @section('content')
     <h1>Index</h1>
-    <a href=" {{ route('post.create') }} ">Create</a>
-    <table>
+    <a class="btn" href="{{ route('post.create') }}">Create</a>
+    <table class="table">
         <thead>
-            <tr>
+            <th>
                 ID
-            </tr>
-            <tr>
+            </th>
+            <th>
                 Title
-            </tr>
-            <tr>
+            </th>
+            <th>
                 Posted
-            </tr>
-            <tr>
+            </th>
+            <th>
                 Category
-            </tr>
-            <tr>
+            </th>
+            <th>
                 Actions
-            </tr>
+            </th>
         </thead>
         <tbody>
             @foreach ($posts as $post)
@@ -45,7 +45,7 @@
                         <form action="{{ route('post.destroy', $post) }}" method="post">
                             @method('DELETE')
                             @csrf
-                            <button type="submit">Delete</button>
+                            <button class="btn btn-danger" type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>
