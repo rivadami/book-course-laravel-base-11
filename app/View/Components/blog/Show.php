@@ -12,8 +12,6 @@ class Show extends Component
     /**
      * Create a new component instance.
      */
-    public $title;
-
     public function __construct(public Post $post){
 
     }

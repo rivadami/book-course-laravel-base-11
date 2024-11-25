@@ -13,9 +13,9 @@
     </p>
 </div> --}}
 
-{{-- <x-blog.show :post="$post"></x-blog.show> --}}
+<x-blog.show :post="$post"></x-blog.show>
 
-<x-blog.show :post='$post' title='Titulo'></x-blog.show>
+<x-blog.post.show :post='$post' title='Titulo'></x-blog.post.show>
 
 <x-card title='Titulo'></x-card>
 
