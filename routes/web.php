@@ -10,6 +10,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/vue/{n1?}/{n2?}/{n3?}/{n4?}', function () {
+     return view('vue');
+});
+
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
